@@ -1,0 +1,22 @@
+:root {
+  --white: #fff;
+  --itemBackground: #112131;
+  --backgroundColor: #071422;
+}
+
+:focus {
+  outline: transparent;
+  box-shadow: 0 0 0 2px var(--green-500);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+  background-color: var(--backgroundColor);
+  -webkit-font-smoothing: antialised;
+  font-family: "Roboto";
+}
