@@ -7,7 +7,7 @@ export const Header = styled.header`
   width: 100%;
   background: #112131;
   color: white;
-
+  border-bottom: 1px solid #232863;
   span {
     font-size: 30px;
     font-weight: 700;

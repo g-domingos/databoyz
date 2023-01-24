@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 270px;
+  width: 30%;
   height: 160px;
   background: #1c2f41;
   background: linear-gradient(90deg, #5865F2 1%, #1c2f41 1%);

@@ -3,7 +3,7 @@ import { Header } from "./styles";
 export const Navbar = () => {
   return (
     <Header>
-      <span>DataBoyz</span>
+      <span>bisu</span>
     </Header>
   );
 };
