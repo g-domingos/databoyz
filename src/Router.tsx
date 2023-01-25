@@ -9,7 +9,7 @@ export const Router = () => {
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/accounts/:id" element={<Dashboard />} />
       </Route>
     </Routes>
   );

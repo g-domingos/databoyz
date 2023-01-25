@@ -12,19 +12,29 @@ export const OverallCard = ({ data }: any) => {
 
   const requestAPI = (path: string) => {
     axios.get(path).then((response) => {
-      setAccountDetails([...accountDetails, response.data]);
+      setAccountDetails(response.data);
     });
   };
 
   useEffect(() => {
     requestAPI(path);
+    hasActiveCampaigns(accountDetails);
   }, []);
 
+  const hasActiveCampaigns = (data: any) => {
+    return !!data?.data?.length;
+  };
   return (
     <CardContainer>
-      <ClientTitle>
-        <label>{data.business_name}</label>
-        <label>{data.name}</label>
+      <ClientTitle hasActiveCampaings={hasActiveCampaigns(accountDetails)}>
+        <div>
+          <label>{data.business_name}</label>
+
+          <span></span>
+        </div>
+        <div>
+          <label>{data.name}</label>
+        </div>
       </ClientTitle>
       <Table>
         <tbody>
@@ -37,10 +47,7 @@ export const OverallCard = ({ data }: any) => {
               }).format(data.amount_spent / 100)}
             </td>
           </tr>
-          <tr>
-            <td>Campanhas Ativas:</td>
-            {/* <td>{accountDetails}</td> */}
-          </tr>
+          <tr></tr>
         </tbody>
       </Table>
     </CardContainer>

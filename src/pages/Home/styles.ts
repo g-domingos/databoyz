@@ -62,11 +62,11 @@ export const SummaryContainer = styled.div`
   border-radius: 8px;
   margin-top: 15px;
   background: #0b1b2b;
-  height: 300px;
+  height: 250px;
   color: white;
   padding: 0 30px 15px 30px;
   border: 1px solid #232863;
-  
+
   & > div:nth-child(1) {
     margin-top: 20px;
     font-size: 24px;
@@ -77,6 +77,11 @@ export const SummaryContainer = styled.div`
 `;
 
 export const CardOverViewContainer = styled.div`
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
   width: 100%;
   height: 75%;
+  justify-content: center;
 `;

@@ -5,6 +5,7 @@ import GlobalStyle from "./styles/global";
 import { Router } from "./Router";
 import "./global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-tooltip/dist/react-tooltip.css";
 
 function App() {
   return (
