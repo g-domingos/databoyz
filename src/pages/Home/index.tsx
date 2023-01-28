@@ -86,7 +86,7 @@ export const Home = () => {
     };
 
     fetchData();
-  }, []);
+  }, [showConnectModal]);
 
   return (
     <>
@@ -122,14 +122,17 @@ export const Home = () => {
         </SummaryContainer>
 
         <MainBody>
-          <ButtonDiv onClick={handleOpenConnectAccount}>
+          <ButtonDiv onClick={handleOpenConnectAccount}> 
             <VscDebugDisconnect size={35} />
           </ButtonDiv>
           <TitleDiv>Painel de Clientes</TitleDiv>
           <CardsContainer>
             {apiData?.map((client: any, index: number) => (
-              
-              <NavLink to={"/accounts/" + client.id}  style={{textDecoration: "none"}}>
+              <NavLink
+                to={"/accounts/" + client.id}
+                style={{ textDecoration: "none" }}
+                state={{"client" : client.name + " - " + client.business_name}}
+              >
                 <OverallCard data={client} key={index} />
               </NavLink>
             ))}

@@ -15,6 +15,7 @@ export const ConnectModal = ({ show, handleClose, children }: any) => {
   };
   const handleSave = () => {
     localStorage.setItem("access_token", accessToken);
+    handleClose()
   };
   return (
     <ModalStyled
@@ -27,7 +28,7 @@ export const ConnectModal = ({ show, handleClose, children }: any) => {
           <label>Access Token FacebookAds</label>
           <input
             onChange={() => getInputValue(event)}
-            value={storedAccessToken}
+            
           ></input>
         </div>
       </Container>

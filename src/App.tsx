@@ -9,7 +9,7 @@ import "react-tooltip/dist/react-tooltip.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <GlobalStyle />
       <Router />
     </BrowserRouter>

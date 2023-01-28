@@ -1,3 +1,4 @@
+import { priceFormatter } from "../../utils";
 import { CardContainer } from "./styles";
 
 interface CardOverviewProps {
@@ -17,10 +18,7 @@ export const CardOverview = ({
       <div>
         <span>
           {isCurrency
-            ? new Intl.NumberFormat("pt-br", {
-                style: "currency",
-                currency: "BRL",
-              }).format(value)
+            ? priceFormatter(value)
             : value?.toLocaleString('pt-BR')}
         </span>
       </div>
