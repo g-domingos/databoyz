@@ -9,8 +9,7 @@ import "react-tooltip/dist/react-tooltip.css";
 
 function App() {
   return (
-    //basename={process.env.PUBLIC_URL}
-    <BrowserRouter >
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <GlobalStyle />
       <Router />
     </BrowserRouter>
