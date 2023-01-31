@@ -3,9 +3,8 @@ import ReactECharts from "echarts-for-react";
 import { ChartDiv } from "./styles";
 
 export const LineChart = ({ data, label }: any) => {
-
-  const xData = data.map((item: any) => item.date)
-  const yData = data.map((item:any) => item.value)
+  const xData = data.map((item: any) => item.date);
+  const yData = data.map((item: any) => item.value);
 
   const option = {
     xAxis: {

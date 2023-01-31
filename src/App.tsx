@@ -7,9 +7,10 @@ import "./global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-tooltip/dist/react-tooltip.css";
 
+//basename={window.location.pathname || ''}
 function App() {
   return (
-    <BrowserRouter basename={window.location.pathname || ''}>
+    <BrowserRouter>
       <GlobalStyle />
       <Router />
     </BrowserRouter>
