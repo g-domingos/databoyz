@@ -119,7 +119,6 @@ export const Dashboard = () => {
     getListOfAdsId(urlAdsIds);
   }, [timeRange]);
 
-  console.log(adsIdList.length);
   return (
     <Container>
       <div className="title">{client}</div>
